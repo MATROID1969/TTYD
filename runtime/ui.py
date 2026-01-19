@@ -4,26 +4,6 @@
 # In[ ]:
 
 
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-# runtime/ui.py
-
 import streamlit as st
 import matplotlib.figure as mpl_fig
 
@@ -33,6 +13,16 @@ from engine.conversation_gate import classify_followup
 from engine.question_rewriter import rewrite_question
 from engine.conversation_logger import log_event
 from engine.verbalizer import verbalize_result
+
+
+from audio_recorder_streamlit import audio_recorder
+import tempfile
+import hashlib
+import os
+from openai import OpenAI
+
+
+# In[ ]:
 
 
 # =========================================================
@@ -101,8 +91,6 @@ def apply_theme_css(theme_color: str | None = None):
         )
 
 
-
-
 # In[ ]:
 
 
@@ -124,6 +112,12 @@ def render_app_ui(cfg: dict, df, prompt: str, app_path: str):
     # Conversation memory
     if "base_question" not in st.session_state:
         st.session_state["base_question"] = None
+    if "last_audio_hash" not in st.session_state:
+        st.session_state["last_audio_hash"] = None
+    
+    if "voice_question" not in st.session_state:
+        st.session_state["voice_question"] = ""
+
 
     # Layout
     show_code_panel = bool(ui_cfg.get("show_code_panel", True))
@@ -139,10 +133,52 @@ def render_app_ui(cfg: dict, df, prompt: str, app_path: str):
                 code_placeholder = st.empty()
 
     with col_left:
-        question = st.text_area(
-            "Írd be a kérdést:",
-            placeholder="Pl.: Melyik a legnépszerűbb úticél?",
+        # 🎙️ Hangbemondás
+        audio_bytes = audio_recorder(
+            recording_color="#ff3333",
+            neutral_color="#cccccc",
+            icon_name="microphone",
+            icon_size="2x",
         )
+
+        if audio_bytes:
+            audio_hash = hashlib.md5(audio_bytes).hexdigest()
+
+            if audio_hash != st.session_state["last_audio_hash"]:
+                st.session_state["last_audio_hash"] = audio_hash
+
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as tmp:
+                    tmp.write(audio_bytes)
+                    tmp_path = tmp.name
+
+                try:
+                    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+                    with open(tmp_path, "rb") as audio_file:
+                                transcript = client.audio.transcriptions.create(
+                                    file=audio_file,
+                                    model="whisper-1",
+                                    language="hu",
+                                    response_format="text",
+                                    temperature=0,
+                                    prompt=(
+                                        "Magyar piackutatási és adatelemzési kérdések: "
+                                        "gyorsétterem, csokoládé, százalék, darabszám, "
+                                        "nők, férfiak, budapestiek."
+                                    ),
+                                )
+
+                    st.session_state["voice_question"] = transcript
+
+                finally:
+                    os.remove(tmp_path)
+
+        question = st.text_area(
+                                "Írd be a kérdést:",
+                                value=st.session_state.get("voice_question", ""),
+                                placeholder="Pl.: Melyik a legnépszerűbb úticél?",
+                            )
+
 
         run_clicked = st.button("Futtatás")
         result_placeholder = st.empty()
@@ -223,29 +259,11 @@ def render_app_ui(cfg: dict, df, prompt: str, app_path: str):
                 )        
             # Ez lesz az új base_question
             st.session_state["base_question"] = final_question
+            st.session_state["voice_question"] = ""
+
         
         except Exception as e:
             result_placeholder.error(str(e))
         
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-
-# In[ ]:
-
-
 
 

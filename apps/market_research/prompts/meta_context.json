@@ -1,0 +1,1214 @@
+{
+  "dataset": "market_research",
+  "row_semantics": "1 sor = 1 válaszadó",
+  "source": "data/transformed.xlsx",
+  "fields": [
+    {
+      "name": "Milyen gyakran szokott Ön étterembe járni?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "soha"
+      ]
+    },
+    {
+      "name": "Milyen gyakran rendel házhoz étteremből, akár telefonon, akár online?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "soha"
+      ]
+    },
+    {
+      "name": "Milyen gyakran rendel házhoz gyorsétterem láncoktól?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "soha"
+      ]
+    },
+    {
+      "name": "Van-e személygépkocsi az Ön(ök) háztartásában (vagy a háztartás bármelyik tagjának tulajdonában)?",
+      "type": "categorical",
+      "values": [
+        "igen több autónk is van",
+        "igen, egy autónk van",
+        "nincs autónk"
+      ]
+    },
+    {
+      "name": "Ön szokott-e dönteni az Ön által használt autóval kapcsolatos ügyekben (szervizelés, biztosítás)?",
+      "type": "categorical",
+      "values": [
+        "egyáltalán nincs szerepem ezekben a döntésekben",
+        "igen, kizárólag én döntök ezekben a dolgokban",
+        "nem szoktam autót vezetni",
+        "részben én döntök ezekben a dolgokban"
+      ]
+    },
+    {
+      "name": "Milyen meghajtású az Ön vagy családja által leggyakrabban használt autó?",
+      "type": "categorical",
+      "values": [
+        "Benzines",
+        "Dízel",
+        "Egyéb",
+        "Hybrid (benzinmotoros és elektromos)",
+        "Nincs autó a háztartásban",
+        "Plugin hybrid (otthon is tölthető autó)",
+        "Tisztán elektromos"
+      ]
+    },
+    {
+      "name": "Hogyan vásárolták az Ön vagy családja által leggyakrabban használt autót?",
+      "type": "categorical",
+      "values": [
+        "Használtan",
+        "Nincs autó a háztartásban",
+        "Újonnan"
+      ]
+    },
+    {
+      "name": "Hány éves a legfiatalabb autó az Önök háztartásában? Mindegy, hogy Ön vagy más vezeti az adott autót.",
+      "type": "categorical",
+      "values": [
+        "1 évnél fiatalabb",
+        "1-3 éves",
+        "11-13 éves",
+        "14-17 éves",
+        "18-20 éves",
+        "20 évnél idősebb",
+        "4-7 éves",
+        "8-10 éves",
+        "Nincs autó a háztartásban"
+      ]
+    },
+    {
+      "name": "Milyen típusú biztosítása van az Ön vagy családja által leggyakrabban használt autónak?",
+      "type": "categorical",
+      "values": [
+        "Csak a kötelező felelősségbiztosítás (KGFB)",
+        "Kötelező felelősségbiztosítás és CASCO",
+        "Nincs autó a háztartásban"
+      ]
+    },
+    {
+      "name": "Tervez-e autót vásárolni a következő 1 évben?",
+      "type": "categorical",
+      "values": [
+        "biztos, hogy nem vásárolok autót",
+        "gondolkodom az autó vásároláson, de még nem biztos, hogy vásárolok",
+        "igen, biztos, hogy vásárolok autót"
+      ]
+    },
+    {
+      "name": "Milyen autót tervez vásárolni a következő 1 évben?",
+      "type": "categorical",
+      "values": [
+        "használt autó vásárlását tervezem",
+        "még nem tudom, hogy új vagy használt autó vásárlását tervezem-e",
+        "nem tervezek autót vásárolni",
+        "új autó vásárlását tervezem"
+      ]
+    },
+    {
+      "name": "Volt-e Önnek magáncélú (pihenés, szórakozásból céljából tett), legalább 1 éjszakát magába foglaló belföldi utazása az elmúlt 3 évben?",
+      "type": "categorical",
+      "values": [
+        "igen, az elmúlt 3 évben (de több mint egy éve)",
+        "igen, az elmúlt egy évben (is)",
+        "nem, az elmúlt 3 évben nem utaztam belföldre"
+      ]
+    },
+    {
+      "name": "Volt-e Önnek magáncélú (pihenés, szórakozásból céljából tett), legalább 1 éjszakát magába foglaló külföldi utazása az elmúlt 3 évben?",
+      "type": "categorical",
+      "values": [
+        "igen, az elmúlt 3 évben (de több mint egy éve)",
+        "igen, az elmúlt egy évben (is)",
+        "nem, az elmúlt 3 évben nem utaztam külföldre"
+      ]
+    },
+    {
+      "name": "Tervez-e magáncélú (pihenés, szórakozásból céljából tett), legalább 1 éjszakát magába foglaló belföldi és/ vagy külföldi utazást ezen a nyáron?",
+      "type": "categorical",
+      "values": [
+        "igen, belföldi utazást tervezek",
+        "igen, belföldi és külföldi utazást is tervezek",
+        "igen, külföldi utazást tervezek",
+        "nem, jelenleg nem tervezek ilyen utazást"
+      ]
+    },
+    {
+      "name": "Hány ilyen magáncélú (pihenés, szórakozásból céljából tett), legalább 1 éjszakát magába foglaló belföldi és/ vagy külföldi utazást tervez ezen a nyáron?",
+      "type": "categorical",
+      "values": [
+        "1 ilyen utazást tervezek",
+        "2 ilyen utazást tervezek",
+        "3 ilyen utazást tervezek",
+        "4 vagy annál több ilyen utazást tervezek",
+        "Nem tervezek ilyen utazást"
+      ]
+    },
+    {
+      "name": "Tervez-e tengerparti nyaralást ezen a nyáron a nyaralási időszaka alatt?",
+      "type": "categorical",
+      "values": [
+        "igen, biztos, hogy lesz tengerparti nyaralásom ezen a nyáron",
+        "igen, tervezek, de még nem biztos, hogy lesz ilyen utazásom",
+        "nem tervezek külföldi utazást",
+        "nem, jelenleg nem tervezek ilyen utazást"
+      ]
+    },
+    {
+      "name": "Melyik üzletben vásárolt Ön a leggyakrabban az elmúlt 1 évben?",
+      "type": "categorical",
+      "values": [
+        "Bauhaus",
+        "DM",
+        "Decathlon",
+        "Egyikben sem vásároltam az elmúlt 1 évben",
+        "Euronics",
+        "Hervis",
+        "IKEA",
+        "Intersport",
+        "JYSK",
+        "Media Markt",
+        "Müller",
+        "OBI",
+        "Praktiker",
+        "Rossmann",
+        "XXXLutz",
+        "eMag (beleértve a korábbi Extreme Digitalt is)"
+      ]
+    },
+    {
+      "name": "Vásárolt-e az elmúlt 1 évben barkácsáruházban terméket?",
+      "type": "categorical",
+      "values": [
+        "igen, vásároltam barkácsáruházban",
+        "nem vásároltam barkácsáruházban"
+      ]
+    },
+    {
+      "name": "Milyen terméket vásárol leggyakrabban a barkácsáruházban?",
+      "type": "categorical",
+      "values": [
+        "Egyéb dolgot",
+        "Festékek és lakkok",
+        "Fürdőszoba és konyha",
+        "Fűtés és hűtés",
+        "Kerti termékek",
+        "Lakberendezés",
+        "Nem vásároltam barkácsáruházban az elmúlt 1 évben",
+        "Padló és falburkolat",
+        "Szerszámok",
+        "Vasalatok és rögzítőelemek",
+        "Villanyszerelési termékek",
+        "Építőanyagok"
+      ]
+    },
+    {
+      "name": "Milyen gyakran szokott Ön dohányozni?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "soha"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön táblás csokoládét, csokoládészeletet?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön csokoládédesszertet, dobozos csokit, bonbont?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön mentolos vagy egyéb cukorkát?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön rágógumit?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön chipset, ropit, kekszet, snackeket?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön olajos magvakat?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön gabonapelyhet, müzlit?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön natúr vagy gyümölcsjoghurtot?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön túró rudit, hűtött tejszeletet?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran szokott Ön sütni (süteményt)?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön sört nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön alkoholmentes sört nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön ízesített sört (alacsony vagy 0%-os alkoholtartalommal) nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön bort nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön sört télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön alkoholmentes sört télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön ízesített sört (alacsony vagy 0%-os alkoholtartalommal) télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön bort télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön ásványvizet nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön ízesített ásványvizet nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön kólát nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön szénsavas üdítőitalt (nem kólát) nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön gyümölcslevet nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön jegesteát nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön energiaitalt nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön ásványvizet télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön ízesített ásványvizet télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön kólát télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön szénsavas üdítőitalt (nem kólát) télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön gyümölcslevet télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön jegesteát télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön energiaitalt télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön kávét nyáron?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Milyen gyakran fogyaszt Ön kávét télen?",
+      "type": "categorical",
+      "values": [
+        "(szinte) minden nap",
+        "legalább havonta egyszer",
+        "legalább hetente egyszer",
+        "ritkábban mint havonta",
+        "sosem fogyasztom"
+      ]
+    },
+    {
+      "name": "Hol vásárolják leggyakrabban a kávét az otthoni kávéfőzéshez?",
+      "type": "categorical",
+      "values": [
+        "kávéra szakosodott hagyományos boltban",
+        "kávézóban, kávéházban",
+        "nem szoktam kávézni",
+        "nem szoktam otthon kávézni",
+        "nem vásárolok kávét",
+        "online rendelem meg a kávégépemet gyártó cég honlapjáról, applikációjából",
+        "online rendelem meg webáruházból",
+        "online rendelem meg, kávézásra szakosodott online boltból",
+        "élelmiszerboltban, szupermarketben"
+      ]
+    },
+    {
+      "name": "Mi a nemed?",
+      "type": "categorical",
+      "values": [
+        "Férfi",
+        "Nő"
+      ]
+    },
+    {
+      "name": "Mi a legmagasabb befejezett iskolai végzettséged?",
+      "type": "categorical",
+      "values": [
+        "8 általános vagy kevesebb",
+        "Főiskolai, egyetemi diploma",
+        "Középiskolai érettségi",
+        "Szakmunkásképző, szakiskola"
+      ]
+    },
+    {
+      "name": "Melyik településen élsz? Kérlek, írd ide a város nevét:",
+      "type": "numeric",
+      "min": 2112.0,
+      "max": 34351.0
+    },
+    {
+      "name": "Mi a lakóhelyed irányítószáma?",
+      "type": "numeric",
+      "min": 1011.0,
+      "max": 9970.0
+    },
+    {
+      "name": "Általánosságban mennyire szeretsz beszélgetni másokkal a világ dolgairól?",
+      "type": "categorical",
+      "values": [
+        "Inkább nem szeretek",
+        "Nagyon nem szeretek",
+        "Nagyon szeretek",
+        "Nem különösebben szeretek, bár nincs vele bajom",
+        "Többnyire szeretek másokkal a világ dolgairól beszélgetni"
+      ]
+    },
+    {
+      "name": "Előfordult-e az elmúlt 1 évben, hogy az interneten megosztottad a véleményed másokkal termékkel vagy szolgáltatással kapcsolatban vásárlói oldalon, árösszehasonlító oldalon, bármilyen cég saját honlapján?",
+      "type": "categorical",
+      "values": [
+        "Gyakran előfordul (5-10 alkalom)",
+        "Nem történt még ilyen",
+        "Néha előfordul (évente 1-4 alkalom)",
+        "Rendszeresen (10-nél többször fordul elő)"
+      ]
+    },
+    {
+      "name": "Előfordult-e az elmúlt 1 évben, hogy az interneten megosztottad a másokkal termékkel vagy szolgáltatással kapcsolatban a Facebookon, Instagrammon, Tik-tokon illetve egyéb közösségi oldalon?",
+      "type": "categorical",
+      "values": [
+        "Gyakran előfordul (5-10 alkalom)",
+        "Nem történt még ilyen",
+        "Néha előfordul (évente 1-4 alkalom)",
+        "Rendszeresen (10-nél többször fordul elő)"
+      ]
+    },
+    {
+      "name": "KOMMENT",
+      "type": "categorical",
+      "values": [
+        "nem osztom meg másokkal a tapasztalatom",
+        "néha megosztom másokkal a tapasztalatom",
+        "szívesen megosztom másokkal a tapasztalatom"
+      ]
+    },
+    {
+      "name": "Amikor többen, csapatban dolgoztok együtt, akkor melyik állítás az amelyik a leginkább illik rád?",
+      "type": "categorical",
+      "values": [
+        "Aktívan részt veszek a csapat munkájában",
+        "Figyelek arra, hogy a cél felé haladjunk és ha kell irányítom a beszélgetést",
+        "Inkább egyedül szeretek dolgozni",
+        "Keveset szólok, de akkor fontos dolgokat mondok",
+        "Kimondottan szeretek csapatban dolgozni",
+        "Nehezemre esik mások előtt beszélnem vagy előadást tartanom",
+        "Szeretek sokat beszélni, együtt ötletelni másokkal egy új dolgon",
+        "Szeretem leírni mások számára is láthatóan, amiről beszélgetünk",
+        "Szívesen vállalom a csapat vezetését és az eredmények bemutatását"
+      ]
+    },
+    {
+      "name": "A következő szabadidős tevékenységek közül melyiket végeznéd el a legszívesebben, melyiket próbálnád ki, ha lehetőséged lenne rá?",
+      "type": "categorical",
+      "values": [
+        "Főzés vagy sütés",
+        "Játék, például társasjátékok vagy videojátékok",
+        "Képzés, oktatás, tanulás",
+        "Képzőművészeti tevékenységek, például festés, rajzolás vagy szobrászat",
+        "Olvasás, írás, könyvek vagy egyéb írott anyagok fogyasztása",
+        "Szabadban eltöltött idő, például túrázás, kerékpározás, kempingezés vagy horgászat",
+        "Színház, film vagy más művészeti előadások látogatása",
+        "Utazás, felfedezés, új kultúrák megismerése",
+        "Zenehallgatás, zenekészítés vagy zenélés"
+      ]
+    },
+    {
+      "name": "Hányan éltek egy háztartásban?",
+      "type": "categorical",
+      "values": [
+        "Egyedül élek",
+        "Hárman",
+        "Ketten",
+        "Négyen",
+        "Több mint öten",
+        "Öten"
+      ]
+    },
+    {
+      "name": "Hány eltartott gyerek, fiatal felnőtt él a háztartásodban?",
+      "type": "categorical",
+      "values": [
+        "Egy",
+        "Egy sem",
+        "Hat vagy több",
+        "Három",
+        "Kettő",
+        "Négy",
+        "Öt"
+      ]
+    },
+    {
+      "name": "Az alábbiak közül hova sorolnád magad?",
+      "type": "categorical",
+      "values": [
+        "Alkalmazott értelmiségi (diplomás)",
+        "Alkalmi munkákból élő",
+        "Betanított, segédmunkás, háztartási alkalmazott (pl. házvezetőnő, takarító)",
+        "Diplomás önálló értelmiségi, egyéni vállalkozó (magánorvos, magán jogász, magán építészmérnök, szabadfoglalkozású újságí",
+        "Egyéb",
+        "Egyéb inaktív vagy eltartott",
+        "Egyéni vállalkozó, vállalkozás vagy üzletrész tulajdonosa alkalmazott alkalmazottal",
+        "Egyéni vállalkozó, vállalkozás vagy üzletrész tulajdonosa alkalmazott nélkül",
+        "Felsővezető, igazgató vagy topmenedzser 5 vagy kevesebb beosztottal - alkalmazottként",
+        "Felsővezető, igazgató vagy topmenedzser 6 vagy több beosztottal - alkalmazottként",
+        "GYES-en, GYET-en, GYED-en, CSED-en lévő",
+        "Háztartásbeli",
+        "Irodai alkalmazott",
+        "Könnyű fizikai munkát végző szakmunkás",
+        "Középvezető, más menedzser 5 vagy 5-nél kevesebb beosztottal - alkalmazottként",
+        "Középvezető, más menedzser 6, vagy 6-nál több beosztottal - alkalmazottként",
+        "Mezőgazdasági termelő, egyéni gazda",
+        "Munkafelügyelő, irányító szakmunkás",
+        "Munkanélküli",
+        "Nehéz fizikai munkát végző szakmunkás",
+        "Nyugdíjas",
+        "Tanuló, diák",
+        "Társas vállalkozás, vagy üzletrész tulajdonosa 5, vagy 5-nél kevesebb alkalmazottal",
+        "Társas vállalkozás, vagy üzletrész tulajdonosa 6 vagy 6-nál több alkalmazottal",
+        "Utazó, szolgáltató jellegű munkát végző (nem fizikai és nem is irodai munka)"
+      ]
+    },
+    {
+      "name": "Dolgozik? (alkalmi munkákból élő is benne van)",
+      "type": "categorical",
+      "values": [
+        "igen",
+        "nem"
+      ]
+    },
+    {
+      "name": "Munkád során melyik állítás igaz rád?",
+      "type": "categorical",
+      "values": [
+        "Munkám során inkább fizikai munkát végzek",
+        "Munkám során inkább szellemi munkát végzek",
+        "Munkám során kizárólag fizikai munkát végzek",
+        "Munkám során kizárólag szellemi munkát végzek"
+      ]
+    },
+    {
+      "name": "Melyik szférában dolgozol?",
+      "type": "categorical",
+      "values": [
+        "Versenyszférában, magánszférában",
+        "Állami szférában, közigazgatásban közalkalmazottként, köztisztviselőként, kormánytisztviselőként"
+      ]
+    },
+    {
+      "name": "Mennyire értesz egyet az alábbi állítással?   Szeretem az elsők között kipróbálni a technológiai újdonságokat.",
+      "type": "categorical",
+      "values": [
+        "Egyáltalán NEM IGAZ",
+        "Inkább IGAZ",
+        "Inkább NEM IGAZ",
+        "Teljes mértékben IGAZ"
+      ]
+    },
+    {
+      "name": "Mennyire értesz egyet az alábbi állítással?   Úgy érzem, lépést tudok tartani a technológia fejlődésével.",
+      "type": "categorical",
+      "values": [
+        "Egyáltalán NEM IGAZ",
+        "Inkább IGAZ",
+        "Inkább NEM IGAZ",
+        "Teljes mértékben IGAZ"
+      ]
+    },
+    {
+      "name": "Mennyire értesz egyet az alábbi állítással?   Magabiztosan kezelem az okostelefonos applikációkat.",
+      "type": "categorical",
+      "values": [
+        "Egyáltalán NEM IGAZ",
+        "Inkább IGAZ",
+        "Inkább NEM IGAZ",
+        "Teljes mértékben IGAZ"
+      ]
+    },
+    {
+      "name": "Mennyire értesz egyet az alábbi állítással?   Nyitott vagyok az olyan okosotthon megoldásokra, ahol távolról vezérelhető, programozható okos elektronikai eszközök vannak hálózatba kötve.",
+      "type": "categorical",
+      "values": [
+        "Egyáltalán NEM IGAZ",
+        "Inkább IGAZ",
+        "Inkább NEM IGAZ",
+        "Teljes mértékben IGAZ"
+      ]
+    },
+    {
+      "name": "Mennyire értesz egyet az alábbi állítással?   Nem tudom elképzelni az életemet okostelefon nélkül.",
+      "type": "categorical",
+      "values": [
+        "Egyáltalán NEM IGAZ",
+        "Inkább IGAZ",
+        "Inkább NEM IGAZ",
+        "Teljes mértékben IGAZ"
+      ]
+    },
+    {
+      "name": "Mennyire értesz egyet az alábbi állítással?   Ha pár órán keresztül &#39;offline&#39; vagyok, úgy érzem, kimaradok valamiből.",
+      "type": "categorical",
+      "values": [
+        "Egyáltalán NEM IGAZ",
+        "Inkább IGAZ",
+        "Inkább NEM IGAZ",
+        "Teljes mértékben IGAZ"
+      ]
+    },
+    {
+      "name": "Mennyire értesz egyet az alábbi állítással?   Banki ügyeimet interneten keresztül (is) intézem.",
+      "type": "categorical",
+      "values": [
+        "Egyáltalán NEM IGAZ",
+        "Inkább IGAZ",
+        "Inkább NEM IGAZ",
+        "Teljes mértékben IGAZ"
+      ]
+    },
+    {
+      "name": "HETENTE körülbelül hány órát tölt Ön internethez kapcsolódó tevékenységekkel kisképernyőn (okostelefonon, tableten)?",
+      "type": "categorical",
+      "values": [
+        "1 óránál kevesebbet",
+        "1-2 órát",
+        "11-20 órát",
+        "21-30 órát",
+        "3-5 órát",
+        "31-40 órát",
+        "41-50 órát",
+        "50 óránál többet",
+        "6-10 órát",
+        "Nem használ kisképernyős eszközt",
+        "Nem szoktam ilyen tevékenységet végezni"
+      ]
+    },
+    {
+      "name": "Tájékozódik-e Ön a világ dolgairól, a hírekről közösségi média oldalakon (pl. Facebook, Instagram)?",
+      "type": "categorical",
+      "values": [
+        "Alkalmanként tájékozódok ilyen módon",
+        "Nem tájékozódok ilyen módon",
+        "Rendszeresen tájékozódok ilyen módon"
+      ]
+    },
+    {
+      "name": "Nem",
+      "type": "categorical",
+      "values": [
+        "Férfi",
+        "Nő"
+      ]
+    },
+    {
+      "name": "Pontos életkor",
+      "type": "numeric",
+      "min": 18.0,
+      "max": 65.0
+    },
+    {
+      "name": "Korkategória",
+      "type": "categorical",
+      "values": [
+        "18-29 éves",
+        "30-39 éves",
+        "40-49 éves",
+        "50-59 éves",
+        "60-69 éves"
+      ]
+    },
+    {
+      "name": "Végzettség",
+      "type": "categorical",
+      "values": [
+        "Alapfokú",
+        "Felsőfokú",
+        "Középfokú"
+      ]
+    },
+    {
+      "name": "Településtípus",
+      "type": "categorical",
+      "values": [
+        "Budapest",
+        "Falu",
+        "Város"
+      ]
+    },
+    {
+      "name": "weighted by nem_kor_lak@ kor_vegz_lak@ telep_regio@",
+      "type": "numeric",
+      "min": 0.3952481183074845,
+      "max": 2.496559576071958
+    },
+    {
+      "name": "Melyik évben születtél?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "hónapban",
+        "napon",
+        "évben"
+      ],
+      "exclude_values": []
+    },
+    {
+      "name": "A következő gyorsétterem láncok közül melyiket ismeri?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Burger King",
+        "KFC",
+        "McDonalds",
+        "Pizza Hut",
+        "Starbucks",
+        "Subway",
+        "Ezek közül egyik gyorsétterem láncot sem ismerem"
+      ],
+      "exclude_values": [
+        "Ezek közül egyik gyorsétterem láncot sem ismerem"
+      ]
+    },
+    {
+      "name": "A következő gyorsétterem láncok közül melyikben étkezett az elmúlt 1 évben?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Burger King",
+        "KFC",
+        "McDonalds",
+        "Pizza Hut",
+        "Starbucks",
+        "Subway",
+        "Egyikben sem étkeztem az elmúlt 1 évben, de régebben igen",
+        "Ezek közül egyik gyorsétterem láncot sem ismerem",
+        "Sohasem étkeztem ezekben a gyorséttermekben"
+      ],
+      "exclude_values": [
+        "Egyikben sem étkeztem az elmúlt 1 évben, de régebben igen",
+        "Ezek közül egyik gyorsétterem láncot sem ismerem",
+        "Sohasem étkeztem ezekben a gyorséttermekben"
+      ]
+    },
+    {
+      "name": "A következő 1 évben elképzelhető-e, hogy az alábbi gyorsétterem láncok valamelyikében fog étkezni?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Burger King",
+        "KFC",
+        "McDonalds",
+        "Pizza Hut",
+        "Starbucks",
+        "Subway",
+        "Ezek közül egyik gyorsétterem láncot sem ismerem",
+        "Nem képzelhető el, hogy ezek közül bármelyikben étkezni fogok"
+      ],
+      "exclude_values": [
+        "Ezek közül egyik gyorsétterem láncot sem ismerem",
+        "Nem képzelhető el, hogy ezek közül bármelyikben étkezni fogok"
+      ]
+    },
+    {
+      "name": "Szokott-e Ön autót vezetni?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "igen, a saját cég tulajdonában álló autót",
+        "igen, saját tulajdonban (vagy a háztartás tulajdonában) lévő autót",
+        "igen, egyéb autót",
+        "igen, egyéb cégautót",
+        "nem szoktam autót vezetni"
+      ],
+      "exclude_values": [
+        "nem szoktam autót vezetni"
+      ]
+    },
+    {
+      "name": "Melyik régióba tervezi, tervezik ezt a belföldi utazást, ezen a nyáron?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Balaton és környéke (Balatonfüred, Siófok, Keszhely, Hévíz, Zalakaros stb.)",
+        "Budapest és környéke (Velencei tó, Velence, Komárom, Esztergom, Visegrád, Szentendre, Gödöllő, Vecsés, Ráckeve, Gárdony Székesfehérvár)",
+        "Bük-Sárvár és környéke (Szombathely, Sárvár, Bük stb.)",
+        "Debrecen és környéke (Tisza tó, Tiszafüred, Poroszló, Berekfürdő, Balmazújváros, Debrecen, Hajdúszoboszló stb.)",
+        "Gyula és környéke (Békéscsaba, Gyula stb.)",
+        "Győr-Pannonhalma és környéke (Hegyeshalom, Mosonmagyaróvár, Pannonhalma, Győr stb.)",
+        "Mátra-Bükk és környéke (Gyöngyös, Parádsasvár, Egerszalók, Eger, Miskolc stb.)",
+        "Pécs-Villány és környéke (Orfű, Pécs, Harkány, Siklós, Villány stb.)",
+        "Sopron-Fertő tó környéke (Sopron, Hegykő, Röjtökmuzsaj, Fertő-tó stb.)",
+        "Szeged és környéke (Mórhalom, Szeged, Hódmezővásárhely, Makó stb.)",
+        "Tokaj és Nyíregyháza és környéke (Tokaj, Mád, Sárospatak, Nyíregyháza, Nyírbátor, Vásárosnamény, Kisvárda stb.)",
+        "Egyéb, más magyarországi régióba megyek / megyünk nyaralni",
+        "Még nem döntöttem, döntöttük el, hogy melyik régióba megyek / megyünk nyaralni",
+        "Nem tervezek belföldi utazást"
+      ],
+      "exclude_values": [
+        "Még nem döntöttem, döntöttük el, hogy melyik régióba megyek / megyünk nyaralni",
+        "Nem tervezek belföldi utazást"
+      ]
+    },
+    {
+      "name": "Melyik országba tervezi ezt a külföldi utazást ezen a nyáron?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Ausztria",
+        "Bulgária",
+        "Egyiptom",
+        "Franciaország",
+        "Görögország",
+        "Horvátország",
+        "Németország",
+        "Olaszország",
+        "Spanyolország",
+        "Törökország",
+        "USA",
+        "Egyéb országba megyek / megyünk",
+        "Még nem döntöttem, döntöttük el, hogy melyik országba megyek / megyünk nyaralni",
+        "Nem tervezek külföldi utazást"
+      ],
+      "exclude_values": [
+        "Még nem döntöttem, döntöttük el, hogy melyik országba megyek / megyünk nyaralni",
+        "Nem tervezek külföldi utazást"
+      ]
+    },
+    {
+      "name": "Kérem, jelölje meg azokat az üzleteket, amelyekben vásárolt Ön az elmúlt 1 évben!",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Bauhaus",
+        "DM",
+        "Decathlon",
+        "Euronics",
+        "Hervis",
+        "IKEA",
+        "Intersport",
+        "JYSK",
+        "Media Markt",
+        "Müller",
+        "OBI",
+        "Praktiker",
+        "Rossmann",
+        "XXXLutz",
+        "eMag (beleértve a korábbi Extreme Digitalt is)",
+        "Ezek közül egyikben sem"
+      ],
+      "exclude_values": [
+        "Ezek közül egyikben sem"
+      ]
+    },
+    {
+      "name": "Milyen típusú dohányterméket szokott Ön szívni?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Iqos",
+        "elektromos cigaretta (e-cigi)",
+        "gyári cigaretta, dobozos cigaretta",
+        "magam által töltött cigaretta",
+        "pipa",
+        "sodort cigaretta",
+        "szivar",
+        "szivarka",
+        "egyéb",
+        "nem dohányzik"
+      ],
+      "exclude_values": [
+        "nem dohányzik"
+      ]
+    },
+    {
+      "name": "Milyen típusú kávét fogyaszt Ön otthon?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "filteres kávét (filteres kávégéppel)",
+        "instant kávét (amit csak vízben kell feloldani, pl. Nescafe, 3in1)",
+        "kapszulás kávét (kapszulás kávégéppel)",
+        "szemes kávét (amit meg kell darálni)",
+        "őrölt kávét",
+        "egyéb kávét",
+        "nem szoktam kávézni",
+        "nem szoktam otthon kávézni"
+      ],
+      "exclude_values": [
+        "nem szoktam kávézni",
+        "nem szoktam otthon kávézni"
+      ]
+    },
+    {
+      "name": "Mely témák érdekelnek az alábbiak közül?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Bulvár, celebritásokkal kapcsolatos hírek",
+        "Gazdasággal kapcsolatos hírek, események",
+        "Informatika, internet és digitális eszközök",
+        "Kultúrával, szórakozással kapcsolatos hírek, események",
+        "Könyvek, magazinok",
+        "Közéleti, politikai hírek",
+        "Közösségi média",
+        "Művészetek, képzőművészet",
+        "Sport, sportolók",
+        "TV, film, videó",
+        "Tudomány, technológiai újdonságok",
+        "Videojátékok, online vagy digitális játékok",
+        "Zene, zenehallgatás, zenélés",
+        "Életmód, életvezetés",
+        "Új termékek, szolgáltatások",
+        "A fentiek közül egyik sem"
+      ],
+      "exclude_values": [
+        "A fentiek közül egyik sem"
+      ]
+    },
+    {
+      "name": "Melyik évben születtek a háztartásodban élő gyermekek?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "1. gyermek:  - évben",
+        "2. gyermek:  - évben",
+        "3. gyermek:  - évben",
+        "4. gyermek:  - évben",
+        "5. gyermek:  - évben",
+        "6. gyermek:  - évben"
+      ],
+      "exclude_values": []
+    },
+    {
+      "name": "Konkrétan mi a foglalkozásod, munkaköröd jelenleg?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "FEOR-kód",
+        "FEOR-munkakör",
+        "Munkakör/FEOR"
+      ],
+      "exclude_values": []
+    },
+    {
+      "name": "Az alábbiak közül mely eszközöket használod?",
+      "type": "list",
+      "item_type": "categorical",
+      "values": [
+        "Asztali számítógép (PC)",
+        "E-könyv olvasó",
+        "Hagyományos mobiltelefon",
+        "Laptop/notebook",
+        "Okostelefon",
+        "Tablet",
+        "Egyik sem"
+      ],
+      "exclude_values": [
+        "Egyik sem"
+      ]
+    }
+  ]
+}

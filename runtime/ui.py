@@ -176,7 +176,7 @@ def render_app_ui(cfg: dict, df, prompt: str, app_path: str):
         question = st.text_area(
                                 "Írd be a kérdést:",
                                 value=st.session_state.get("voice_question", ""),
-                                placeholder="Pl.: Melyik a legnépszerűbb úticél?",
+                                placeholder="",
                             )
 
 

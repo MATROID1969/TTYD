@@ -1,0 +1,78 @@
+{
+  "functions": [
+    {
+      "name": "calc_survivor",
+      "description": "Gyorsított survivor függvény, amely meghatározza, hogy a kiválasztott szerződések közül adott hónapig hány maradt aktív.",
+      "input": {
+        "df_filtered": "pandas.DataFrame – a szűrt adatállomány, amely tartalmazza legalább a 'Szerzodeskotes_datuma' és 'Kockazatviselés_vege' oszlopokat.",
+        "vegdatum": "pd.Timestamp – az elemzés végdátuma, pl. '2024-12-31'.",
+        "max_honap": "int – opcionális, maximum hónapszám a számításhoz (alapértelmezett: 36)."
+      },
+      "output": {
+        "type": "pandas.DataFrame",
+        "columns": [
+          "Honap_szam",
+          "Survivor"
+        ],
+        "description": "Minden hónaphoz a túlélési arány (Survivor) értékét adja meg, ahol Survivor(i) = S_i / A_i."
+      },
+      "example": {
+        "code": "df_filtered = df[df['Szerzodes_modozat'] == 'CASCO']\nsurv_df = calc_survivor(df_filtered, pd.Timestamp('2024-12-31'))",
+        "output": "pandas.DataFrame 2 oszloppal: Honap_szam (int), Survivor (float)"
+      }
+    },
+    {
+      "name": "expected_trapezoid",
+      "description": "A túlélési függvény (survivor curve) alapján becsli a várható élettartamot trapezoid integrálással (numerikus területmérés).",
+      "input": {
+        "df_surv": "pandas.DataFrame – a calc_survivor kimenete, 'Honap_szam' és 'Survivor' oszlopokkal."
+      },
+      "output": {
+        "type": "float",
+        "description": "A várható élettartam hónapokban."
+      },
+      "example": {
+        "code": "life_months = expected_trapezoid(surv_df)\nlife_years = life_months / 12",
+        "output": "float – várható élettartam hónapokban vagy években"
+      }
+    },
+    {
+      "name": "conditional_one_year_retention",
+      "description": "A jelenleg aktív szerződések közül kiszámítja, hogy 1 év múlva várhatóan hány százalék marad aktív (feltételes túlélési arány).",
+      "input": {
+        "df_filtered": "pandas.DataFrame – a szűrt szerződésállomány.",
+        "survivor_df": "pandas.DataFrame – a calc_survivor függvény eredménye.",
+        "vegdatum": "pd.Timestamp – az aktuális referencia dátum (pl. '2024-12-31')."
+      },
+      "output": {
+        "type": "float",
+        "unit": "%",
+        "description": "A várható 1 éves megtartási arány (retention rate)."
+      },
+      "example": {
+        "code": "df_f = df[df['Szerzodes_modozat'] == 'CASCO']\nsurv = calc_survivor(df_f, pd.Timestamp('2024-12-31'))\nret = conditional_one_year_retention(df_f, surv, pd.Timestamp('2024-12-31'))",
+        "output": "pl. 87.3"
+      }
+    },
+    {
+      "name": "update_kpis_survivor",
+      "description": "Kiszámítja a survivor analitika három kulcsmutatóját: aktív szerződések száma, várható élettartam (év), 1 éves megtartás (%).",
+      "input": {
+        "df_filtered": "pandas.DataFrame – a szűrt adatállomány, szerződések adataival."
+      },
+      "output": {
+        "type": "dict",
+        "keys": [
+          "active_contracts",
+          "expected_lifetime_years",
+          "retention_pct"
+        ],
+        "description": "Fő KPI-értékek numerikus formában, bázis és aktuális időpontra egyaránt."
+      },
+      "example": {
+        "code": "kpis = update_kpis_survivor(df[df['Szerzodes_modozat']=='CASCO'])\nprint(kpis['expected_lifetime_years'])",
+        "output": "{'active_contracts': 15234, 'expected_lifetime_years': 2.6, 'retention_pct': 84.1}"
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 #!/usr/bin/env python
@@ -12,6 +12,7 @@
 import pandas as pd
 import numpy as np
 import sys
+import engine.analytics.functions as analytics_functions
 
 
 def execute_code(code: str, df):
@@ -34,6 +35,22 @@ def execute_code(code: str, df):
         "matplotlib_theme": matplotlib_theme,
     }
 
+    # 🔑 analytics/functions.py függvényeinek betöltése
+    for name in dir(analytics_functions):
+        if name.startswith("_"):
+            continue
+        obj = getattr(analytics_functions, name)
+        if callable(obj):
+            exec_env[name] = obj
+
+    # 🔍 Debug / observability: milyen függvényeket lát az AI
+    exec_env["_AVAILABLE_FUNCTIONS"] = sorted(
+        name for name in exec_env.keys()
+        if callable(exec_env[name])
+    )
+
+
+    
     try:
 #        exec(code, {}, exec_env)
          exec(code, exec_env)
